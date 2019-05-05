@@ -1,2 +1,1 @@
 # zadanie-golden
-# zadanie-golden
