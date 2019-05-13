@@ -1,0 +1,251 @@
+Last login: Wed May  8 18:19:27 on ttys000
+MacBook-Air-Sylwia:~ palczo$ cd /Users/palczo/Desktop/zadanie-golden 
+MacBook-Air-Sylwia:zadanie-golden palczo$ git init
+Reinitialized existing Git repository in /Users/palczo/Desktop/zadanie-golden/.git/
+MacBook-Air-Sylwia:zadanie-golden palczo$ npm run init-project
+
+> taskrunner@1.0.0 init-project /Users/palczo/Desktop/zadanie-golden
+> npm install && npm-run-all init:*
+
+npm WARN taskrunner@1.0.0 No description
+npm WARN taskrunner@1.0.0 No repository field.
+
+audited 6324 packages in 4.428s
+found 4 vulnerabilities (1 low, 2 moderate, 1 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+> taskrunner@1.0.0 init:dirs /Users/palczo/Desktop/zadanie-golden
+> mkdirp sass css vendor images js
+
+
+> taskrunner@1.0.0 init:files /Users/palczo/Desktop/zadanie-golden
+> touch README.md index.html sass/style.scss js/script.js
+
+
+> taskrunner@1.0.0 init:gitignore /Users/palczo/Desktop/zadanie-golden
+> curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  1267  100  1267    0     0   5096      0 --:--:-- --:--:-- --:--:--  5108
+MacBook-Air-Sylwia:zadanie-golden palczo$ npm audit fix
+npm WARN taskrunner@1.0.0 No description
+npm WARN taskrunner@1.0.0 No repository field.
+
+up to date in 3.011s
+fixed 0 of 4 vulnerabilities in 6324 scanned packages
+  4 vulnerabilities required manual review and could not be updated
+MacBook-Air-Sylwia:zadanie-golden palczo$ npm run watch
+
+> taskrunner@1.0.0 watch /Users/palczo/Desktop/zadanie-golden
+> npm-run-all build:* build-dev -p watch:*
+
+
+> taskrunner@1.0.0 build:sass /Users/palczo/Desktop/zadanie-golden
+> node-sass --output-style compact -o css sass
+
+/Users/palczo/Desktop/zadanie-golden/node_modules/node-sass/lib/binding.js:15
+      throw new Error(errors.missingBinary());
+      ^
+
+Error: Missing binding /Users/palczo/Desktop/zadanie-golden/node_modules/node-sass/vendor/darwin-x64-67/binding.node
+Node Sass could not find a binding for your current environment: OS X 64-bit with Node.js 11.x
+
+Found bindings for the following environments:
+  - OS X 64-bit with Node.js 11.x
+
+This usually happens because your environment has changed since running `npm install`.
+Run `npm rebuild node-sass` to download the binding for your current environment.
+    at module.exports (/Users/palczo/Desktop/zadanie-golden/node_modules/node-sass/lib/binding.js:15:13)
+    at Object.<anonymous> (/Users/palczo/Desktop/zadanie-golden/node_modules/node-sass/lib/index.js:14:35)
+    at Module._compile (internal/modules/cjs/loader.js:722:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:733:10)
+    at Module.load (internal/modules/cjs/loader.js:620:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:560:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:552:3)
+    at Module.require (internal/modules/cjs/loader.js:658:17)
+    at require (internal/modules/cjs/helpers.js:22:18)
+    at Object.<anonymous> (/Users/palczo/Desktop/zadanie-golden/node_modules/node-sass/bin/node-sass:10:10)
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! taskrunner@1.0.0 build:sass: `node-sass --output-style compact -o css sass`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the taskrunner@1.0.0 build:sass script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /Users/palczo/.npm/_logs/2019-05-08T16_21_02_110Z-debug.log
+ERROR: "build:sass" exited with 1.
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! taskrunner@1.0.0 watch: `npm-run-all build:* build-dev -p watch:*`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the taskrunner@1.0.0 watch script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /Users/palczo/.npm/_logs/2019-05-08T16_21_02_159Z-debug.log
+MacBook-Air-Sylwia:zadanie-golden palczo$ sudo npm run watch
+Password:
+
+> taskrunner@1.0.0 watch /Users/palczo/Desktop/zadanie-golden
+> npm-run-all build:* build-dev -p watch:*
+
+
+> taskrunner@1.0.0 build:sass /Users/palczo/Desktop/zadanie-golden
+> node-sass --output-style compact -o css sass
+
+/Users/palczo/Desktop/zadanie-golden/node_modules/node-sass/lib/binding.js:15
+      throw new Error(errors.missingBinary());
+      ^
+
+Error: Missing binding /Users/palczo/Desktop/zadanie-golden/node_modules/node-sass/vendor/darwin-x64-67/binding.node
+Node Sass could not find a binding for your current environment: OS X 64-bit with Node.js 11.x
+
+Found bindings for the following environments:
+  - OS X 64-bit with Node.js 11.x
+
+This usually happens because your environment has changed since running `npm install`.
+Run `npm rebuild node-sass` to download the binding for your current environment.
+    at module.exports (/Users/palczo/Desktop/zadanie-golden/node_modules/node-sass/lib/binding.js:15:13)
+    at Object.<anonymous> (/Users/palczo/Desktop/zadanie-golden/node_modules/node-sass/lib/index.js:14:35)
+    at Module._compile (internal/modules/cjs/loader.js:722:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:733:10)
+    at Module.load (internal/modules/cjs/loader.js:620:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:560:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:552:3)
+    at Module.require (internal/modules/cjs/loader.js:658:17)
+    at require (internal/modules/cjs/helpers.js:22:18)
+    at Object.<anonymous> (/Users/palczo/Desktop/zadanie-golden/node_modules/node-sass/bin/node-sass:10:10)
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! taskrunner@1.0.0 build:sass: `node-sass --output-style compact -o css sass`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the taskrunner@1.0.0 build:sass script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /Users/palczo/.npm/_logs/2019-05-08T16_21_19_479Z-debug.log
+ERROR: "build:sass" exited with 1.
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! taskrunner@1.0.0 watch: `npm-run-all build:* build-dev -p watch:*`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the taskrunner@1.0.0 watch script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /Users/palczo/.npm/_logs/2019-05-08T16_21_19_544Z-debug.log
+MacBook-Air-Sylwia:zadanie-golden palczo$ npm rebuild node-sass
+
+> node-sass@4.12.0 install /Users/palczo/Desktop/zadanie-golden/node_modules/node-sass
+> node scripts/install.js
+
+Cached binary found at /Users/palczo/.npm/node-sass/4.12.0/darwin-x64-67_binding.node
+
+> node-sass@4.12.0 postinstall /Users/palczo/Desktop/zadanie-golden/node_modules/node-sass
+> node scripts/build.js
+
+Binary found at /Users/palczo/Desktop/zadanie-golden/node_modules/node-sass/vendor/darwin-x64-67/binding.node
+Testing binary
+Binary is fine
+node-sass@4.12.0 /Users/palczo/Desktop/zadanie-golden/node_modules/node-sass
+MacBook-Air-Sylwia:zadanie-golden palczo$ npm run watch
+
+> taskrunner@1.0.0 watch /Users/palczo/Desktop/zadanie-golden
+> npm-run-all build:* build-dev -p watch:*
+
+
+> taskrunner@1.0.0 build:sass /Users/palczo/Desktop/zadanie-golden
+> node-sass --output-style compact -o css sass
+
+Rendering Complete, saving .css file...
+Wrote CSS to /Users/palczo/Desktop/zadanie-golden/css/style.css
+Wrote 1 CSS files to /Users/palczo/Desktop/zadanie-golden/css
+
+> taskrunner@1.0.0 build:autoprefixer /Users/palczo/Desktop/zadanie-golden
+> autoprefixer-cli css/style.css
+
+
+> taskrunner@1.0.0 build-dev /Users/palczo/Desktop/zadanie-golden
+> npm-run-all build-dev:sass build:autoprefixer
+
+
+> taskrunner@1.0.0 build-dev:sass /Users/palczo/Desktop/zadanie-golden
+> node-sass --output-style expanded --source-map true -o css sass
+
+Rendering Complete, saving .css file...
+Wrote Source Map to /Users/palczo/Desktop/zadanie-golden/css/style.css.map
+Wrote CSS to /Users/palczo/Desktop/zadanie-golden/css/style.css
+Wrote 1 CSS files to /Users/palczo/Desktop/zadanie-golden/css
+
+> taskrunner@1.0.0 build:autoprefixer /Users/palczo/Desktop/zadanie-golden
+> autoprefixer-cli css/style.css
+
+
+> taskrunner@1.0.0 watch:sassprefixer /Users/palczo/Desktop/zadanie-golden
+> onchange sass/*.scss -- npm run build-dev
+
+
+> taskrunner@1.0.0 watch:browsersync /Users/palczo/Desktop/zadanie-golden
+> browser-sync start --server --files "css/*.css" "*.html"
+
+[Browsersync] Access URLs:
+ --------------------------------------
+       Local: http://localhost:3000
+    External: http://192.168.0.164:3000
+ --------------------------------------
+          UI: http://localhost:3001
+ UI External: http://localhost:3001
+ --------------------------------------
+[Browsersync] Serving files from: ./
+[Browsersync] Watching files...
+
+> taskrunner@1.0.0 build-dev /Users/palczo/Desktop/zadanie-golden
+> npm-run-all build-dev:sass build:autoprefixer
+
+
+> taskrunner@1.0.0 build-dev:sass /Users/palczo/Desktop/zadanie-golden
+> node-sass --output-style expanded --source-map true -o css sass
+
+Rendering Complete, saving .css file...
+Wrote CSS to /Users/palczo/Desktop/zadanie-golden/css/style.css
+Wrote Source Map to /Users/palczo/Desktop/zadanie-golden/css/style.css.map
+Wrote 1 CSS files to /Users/palczo/Desktop/zadanie-golden/css
+[Browsersync] File event [change] : css/style.css
+
+> taskrunner@1.0.0 build:autoprefixer /Users/palczo/Desktop/zadanie-golden
+> autoprefixer-cli css/style.css
+
+[Browsersync] File event [change] : css/style.css
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+ 

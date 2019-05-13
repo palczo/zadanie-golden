@@ -1,0 +1,55 @@
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: "Space Mono", monospace;
+  margin: 0px;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 940px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  margin: 0px auto;
+}
+
+.services-content {
+  padding-top: 40px;
+}
+
+.row {
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.gallery {
+  background-color: rgb(225, 228, 232);
+}
+
+.social-media-icons {
+  word-spacing: 12px;
+  text-align: center;
+  padding: 2.5%;
+}

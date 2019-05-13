@@ -1,0 +1,114 @@
+Last login: Sun May 12 15:51:07 on ttys000
+MacBook-Air-Sylwia:~ palczo$ cd /Users/palczo/Desktop/zadanie-golden 
+MacBook-Air-Sylwia:zadanie-golden palczo$ run npm watch
+-bash: run: command not found
+MacBook-Air-Sylwia:zadanie-golden palczo$ npm watch
+
+Usage: npm <command>
+
+where <command> is one of:
+    access, adduser, audit, bin, bugs, c, cache, ci, cit,
+    clean-install, clean-install-test, completion, config,
+    create, ddp, dedupe, deprecate, dist-tag, docs, doctor,
+    edit, explore, get, help, help-search, hook, i, init,
+    install, install-ci-test, install-test, it, link, list, ln,
+    login, logout, ls, org, outdated, owner, pack, ping, prefix,
+    profile, prune, publish, rb, rebuild, repo, restart, root,
+    run, run-script, s, se, search, set, shrinkwrap, star,
+    stars, start, stop, t, team, test, token, tst, un,
+    uninstall, unpublish, unstar, up, update, v, version, view,
+    whoami
+
+npm <command> -h  quick help on <command>
+npm -l            display full usage info
+npm help <term>   search for help on <term>
+npm help npm      involved overview
+
+Specify configs in the ini-formatted file:
+    /Users/palczo/.npmrc
+or on the command line via: npm <command> --key value
+Config info can be viewed via: npm help config
+
+npm@6.9.0 /usr/local/lib/node_modules/npm
+
+MacBook-Air-Sylwia:zadanie-golden palczo$ npm run watch
+
+> taskrunner@1.0.0 watch /Users/palczo/Desktop/zadanie-golden
+> npm-run-all build:* build-dev -p watch:*
+
+
+> taskrunner@1.0.0 build:sass /Users/palczo/Desktop/zadanie-golden
+> node-sass --output-style compact -o css sass
+
+Rendering Complete, saving .css file...
+Wrote CSS to /Users/palczo/Desktop/zadanie-golden/css/style.css
+Wrote 1 CSS files to /Users/palczo/Desktop/zadanie-golden/css
+
+> taskrunner@1.0.0 build:autoprefixer /Users/palczo/Desktop/zadanie-golden
+> autoprefixer-cli css/style.css
+
+
+> taskrunner@1.0.0 build-dev /Users/palczo/Desktop/zadanie-golden
+> npm-run-all build-dev:sass build:autoprefixer
+
+
+> taskrunner@1.0.0 build-dev:sass /Users/palczo/Desktop/zadanie-golden
+> node-sass --output-style expanded --source-map true -o css sass
+
+Rendering Complete, saving .css file...
+Wrote CSS to /Users/palczo/Desktop/zadanie-golden/css/style.css
+Wrote Source Map to /Users/palczo/Desktop/zadanie-golden/css/style.css.map
+Wrote 1 CSS files to /Users/palczo/Desktop/zadanie-golden/css
+
+> taskrunner@1.0.0 build:autoprefixer /Users/palczo/Desktop/zadanie-golden
+> autoprefixer-cli css/style.css
+
+
+> taskrunner@1.0.0 watch:sassprefixer /Users/palczo/Desktop/zadanie-golden
+> onchange sass/*.scss -- npm run build-dev
+
+
+> taskrunner@1.0.0 watch:browsersync /Users/palczo/Desktop/zadanie-golden
+> browser-sync start --server --files "css/*.css" "*.html"
+
+[Browsersync] Access URLs:
+ --------------------------------------
+       Local: http://localhost:3000
+    External: http://192.168.0.164:3000
+ --------------------------------------
+          UI: http://localhost:3001
+ UI External: http://localhost:3001
+ --------------------------------------
+[Browsersync] Serving files from: ./
+[Browsersync] Watching files...
+[Browsersync] Reloading Browsers...
+
+> taskrunner@1.0.0 build-dev /Users/palczo/Desktop/zadanie-golden
+> npm-run-all build-dev:sass build:autoprefixer
+
+
+> taskrunner@1.0.0 build-dev:sass /Users/palczo/Desktop/zadanie-golden
+> node-sass --output-style expanded --source-map true -o css sass
+
+Rendering Complete, saving .css file...
+Wrote CSS to /Users/palczo/Desktop/zadanie-golden/css/style.css
+Wrote Source Map to /Users/palczo/Desktop/zadanie-golden/css/style.css.map
+Wrote 1 CSS files to /Users/palczo/Desktop/zadanie-golden/css
+[Browsersync] File event [change] : css/style.css
+
+> taskrunner@1.0.0 build:autoprefixer /Users/palczo/Desktop/zadanie-golden
+> autoprefixer-cli css/style.css
+
+[Browsersync] File event [change] : css/style.css
+[Browsersync] File event [change] : css/style.css
+[Browsersync] File event [change] : css/style.css
+[Browsersync] File event [change] : css/style.css
+[Browsersync] File event [change] : css/style.css
+[Browsersync] File event [change] : css/style.css
+[Browsersync] Reloading Browsers...
+[Browsersync] Reloading Browsers...
+[Browsersync] File event [change] : css/style.css
+[Browsersync] File event [change] : css/style.css
+[Browsersync] File event [change] : css/style.css
+[Browsersync] File event [change] : css/style.css
+
